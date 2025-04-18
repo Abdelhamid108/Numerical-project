@@ -1,5 +1,5 @@
 #include<iostream>
-#include "analysis.h"
+#include "DividedDifferenceInterpolator.h"
 #include "integration.h"
 using namespace std;
 

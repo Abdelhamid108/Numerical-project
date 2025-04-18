@@ -57,8 +57,10 @@
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "C_Cpp.codeAnalysis.clangTidy.checks.disabled": [
-    "clang-diagnostic-error",
-    "clang-diagnostic-error"
+    "cppcoreguidelines-avoid-magic-numbers",
+    "modernize-use-nullptr",
+    "readability-identifier-naming",
+    "clang-analyzer-core.CallAndMessage"
   ],
   "files.associations": {
     "array": "cpp",

@@ -5,11 +5,14 @@
             "label": "C/C++: g++.exe build active file",
             "command": "C:\\MinGW\\bin\\g++.exe",
             "args": [
-                "-fdiagnostics-color=always",
+                
                 "-g",
                 "${file}",
                 "-I",
-                "${workspaceFolder}\\analysis",
+                "${workspaceFolder}\\headers",
+                "${workspaceFolder}\\src\\DividedDifferenceInterpolator.cpp",
+                "${workspaceFolder}\\src\\integration.cpp",
+                "${workspaceFolder}\\src\\parser.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
