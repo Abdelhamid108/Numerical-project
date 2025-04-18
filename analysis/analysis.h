@@ -192,7 +192,7 @@ void divide::calcP()
 }
 
 
-int main()
+/*int main()
 {
 
     divide d1;
@@ -203,4 +203,4 @@ int main()
     d1.diffTable();
     d1.calcP();
 
-}
+}*/
