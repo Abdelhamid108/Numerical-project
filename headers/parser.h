@@ -17,10 +17,10 @@ private:
     std::vector<std::string> tokens;
     std::vector<std::string> postfix;
     
-    const std::vector<std::string> math_functions = {
-        "sin", "cos", "tan", "asin", "acos", "atan",
-        "sinh", "cosh", "tanh", "sqrt", "exp", "log", "log10"
-    };
+    const std::vector<std::string> math_functions = {  
+    "sin", "cos", "tan", "asin", "acos", "atan",  
+    "sinh", "cosh", "tanh", "sqrt", "exp", "ln", "log"  
+    }; 
     
     const std::map<std::string, double> constants = {
         {"pi", M_PI}, {"e", M_E}
