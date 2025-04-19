@@ -15,6 +15,7 @@ public:
     void askXX();     // asks for x at which you want to calculate y
     void diffTable(); // calculate and display table
     void calcP();     // calculate and display the desired y
+    divide();
 
 private:
     double XX, x[20], f[20][20], P1;

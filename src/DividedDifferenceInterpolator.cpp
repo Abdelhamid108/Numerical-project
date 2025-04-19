@@ -139,3 +139,13 @@ void divide::calcP() {
     cout << endl << "The value of P" << n - 1 << "(" << XX << "): " 
          << fixed << setprecision(6) << P1 << endl << endl;
 }
+
+divide::divide()
+{
+    askP();
+    askX();
+    askF();
+    askXX();
+    diffTable();
+    calcP();
+}

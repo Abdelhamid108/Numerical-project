@@ -25,7 +25,7 @@ private:
     double simpsons38Rule();
 
 public:
-    void run();
+    NumericalIntegrator();
 };
 
 #endif // NUMERICAL_INTEGRATOR_H

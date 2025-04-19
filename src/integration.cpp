@@ -92,7 +92,7 @@ double NumericalIntegrator::simpsons38Rule() {
     return (3.0 * h / 8.0) * sum;
 }
 
-void NumericalIntegrator::run() {
+ NumericalIntegrator::NumericalIntegrator() {
     cout << "==== Numerical Integration Calculator ====\n";
     
     // Get equation
