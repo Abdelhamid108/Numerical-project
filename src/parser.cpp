@@ -233,11 +233,11 @@ double EquationParser::evaluate(double x_value) {
                 val_stack.push(sqrt(a));
             }
             else if (token == "exp") val_stack.push(exp(a));
-            else if (token == "log") {
+            else if (token == "ln") {
                 if (a <= 0) throw runtime_error("Logarithm of non-positive number");
                 val_stack.push(log(a));
             }
-            else if (token == "log10") {
+            else if (token == "log") {
                 if (a <= 0) throw runtime_error("Logarithm of non-positive number");
                 val_stack.push(log10(a));
             }
