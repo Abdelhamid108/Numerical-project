@@ -13,6 +13,9 @@
                 "${workspaceFolder}\\src\\DividedDifferenceInterpolator.cpp",
                 "${workspaceFolder}\\src\\integration.cpp",
                 "${workspaceFolder}\\src\\parser.cpp",
+                "${workspaceFolder}\\src\\bisection.cpp",
+                "${workspaceFolder}\\src\\secant.cpp",
+
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
