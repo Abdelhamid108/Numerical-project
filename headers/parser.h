@@ -15,19 +15,19 @@
 #include <map>  
 #include <limits>  
 
-class EquationParser {
-private:
-    std::vector<std::string> tokens;
-    std::vector<std::string> postfix;
-    
-    const std::vector<std::string> math_functions = {
-        "sin", "cos", "tan", "asin", "acos", "atan",
-        "sinh", "cosh", "tanh", "sqrt", "exp", "log", "log10"
-    };
-    
-    const std::map<std::string, double> constants = {
-        {"pi", M_PI}, {"e", M_E}
-    };
+class EquationParser {  
+private:  
+    std::vector<std::string> tokens;  
+    std::vector<std::string> postfix;  
+
+    const std::vector<std::string> math_functions = {  
+        "sin", "cos", "tan", "asin", "acos", "atan",  
+        "sinh", "cosh", "tanh", "sqrt", "exp", "ln", "log"  
+    };  
+
+    const std::map<std::string, double> constants = {  
+        {"pi", 3.141592654}, {"e", 2.718281828}  
+    };  
 
     bool isOperator(char c);  
     int precedence(char op);  
@@ -49,5 +49,3 @@ public:
     double evaluate(double x_value, double y_value); // Evaluate for both x and y
     void printPostfix();  
 };  
-
-#endif // EQUATION_PARSER_H
