@@ -16,9 +16,7 @@
                 "${workspaceFolder}\\src\\bisection.cpp",
                 "${workspaceFolder}\\src\\secant.cpp",
                 "${workspaceFolder}\\src\\EulerMethods.cpp",
-
-
-
+                "${workspaceFolder}\\src\\LagrangeInterpolator.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
