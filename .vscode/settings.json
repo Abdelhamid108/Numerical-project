@@ -60,7 +60,8 @@
     "cppcoreguidelines-avoid-magic-numbers",
     "modernize-use-nullptr",
     "readability-identifier-naming",
-    "clang-analyzer-core.CallAndMessage"
+    "clang-analyzer-core.CallAndMessage",
+    "clang-diagnostic-error"
   ],
   "files.associations": {
     "array": "cpp",

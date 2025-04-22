@@ -15,6 +15,9 @@
                 "${workspaceFolder}\\src\\parser.cpp",
                 "${workspaceFolder}\\src\\bisection.cpp",
                 "${workspaceFolder}\\src\\secant.cpp",
+                "${workspaceFolder}\\src\\EulerMethods.cpp",
+
+
 
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
