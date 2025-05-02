@@ -1,65 +1,41 @@
-#include<iostream>
-#include "DividedDifferenceInterpolator.h"
-#include "integration.h"
-#include "bisection.h"
-#include "secant.h"
-#include "EulerMethods.h"
-#include "LagrangeInterpolator.h"
-using namespace std;
+#include <iostream>
+#include <vector>
+#include <iomanip>
+#include "src/PolynomialFitter.cpp"
 
- int main()
- {
-    NumericalIntegrator solve1;
-    //divide solve2;
-    //SecantSolver solve3;
-    //bisection solve;
+int main() {
+    std::cout << std::fixed << std::setprecision(4);
 
-    int n, choice;
-    double inputValue, outputValue;
+    int N;
+    std::cout << "Enter number of data points: ";
+    std::cin >> N;
 
-    cout << "------ Lagrange Interpolation Program (C++) ------\n\n";
-    cout << "1. Calculate y for a given x\n";
-    cout << "2. Calculate x for a given y (inverse interpolation)\n";
-    cout << "Enter your choice (1 or 2): ";
-    cin >> choice;
+    std::vector<double> x(N), y(N);
+    std::cout << "Enter x values:\n";
+    for (auto& xi : x) std::cin >> xi;
+    std::cout << "Enter y values:\n";
+    for (auto& yi : y) std::cin >> yi;
 
-    cout << "\nEnter the number of data points: ";
-    cin >> n;
+    int degree;
+    std::cout << "Enter polynomial degree: ";
+    std::cin >> degree;
 
-    vector<double> x(n), y(n);
+    try {
+        PolynomialFitter fitter(x, y, degree);
+        fitter.fit();
+        const auto& a = fitter.coefficients();
 
-    cout << "\nEnter the values of X:\n";
-    for (int i = 0; i < n; ++i) {
-        cout << "  x[" << i << "] = ";
-        cin >> x[i];
+        std::cout << "\nFitted polynomial:\ny = ";
+        for (int i = 0; i <= degree; ++i) {
+            if (i > 0) std::cout << " + ";
+            std::cout << "(" << a[i] << ")x^" << i;
+        }
+        std::cout << "\n";
     }
-
-    cout << "\nEnter the values of Y:\n";
-    for (int i = 0; i < n; ++i) {
-        cout << "  y[" << i << "] = ";
-        cin >> y[i];
-    }
-
-    LagrangeInterpolator interpolator(x, y);
-
-    cout << fixed << setprecision(6);
-
-    if (choice == 1) {
-        cout << "\nEnter the value of x to interpolate y: ";
-        cin >> inputValue;
-        outputValue = interpolator.interpolateY(inputValue);
-        cout << "\nInterpolated value at x = " << inputValue << " is y(x) = " << outputValue << endl;
-    }
-    else if (choice == 2) {
-        cout << "\nEnter the value of y to interpolate x: ";
-        cin >> inputValue;
-        outputValue = interpolator.interpolateX(inputValue);
-        cout << "\nInterpolated value at y = " << inputValue << " is x(y) = " << outputValue << endl;
-    }
-    else {
-        cout << "Invalid choice.\n";
+    catch (const std::exception& ex) {
+        std::cerr << "Error: " << ex.what() << "\n";
+        return 1;
     }
 
     return 0;
-
- }
+}
