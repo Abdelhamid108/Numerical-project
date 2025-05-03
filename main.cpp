@@ -1,5 +1,12 @@
 #include <iostream>
 #include <vector>
+#include "bisection.h"
+#include "integration.h"
+#include "LagrangeInterpolator.h"
+#include "secant.h"
+#include "EulerMethods.h"
+#include "DividedDifferenceInterpolator.h"
+
 #include <iomanip>
 #include "PolynomialFitter.h"
 
