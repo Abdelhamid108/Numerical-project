@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <iomanip>
-#include "src/PolynomialFitter.cpp"
+#include "PolynomialFitter.h"
 
 int main() {
     std::cout << std::fixed << std::setprecision(4);

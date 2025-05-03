@@ -1,4 +1,4 @@
-#include "headers/PolynomialFitter.h"
+#include "PolynomialFitter.h"
 #include <cmath>
 #include <stdexcept>
 
