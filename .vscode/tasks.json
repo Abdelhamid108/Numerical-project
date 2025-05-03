@@ -17,6 +17,7 @@
                 "${workspaceFolder}\\src\\secant.cpp",
                 "${workspaceFolder}\\src\\EulerMethods.cpp",
                 "${workspaceFolder}\\src\\LagrangeInterpolator.cpp",
+                "${workspaceFolder}\\src\\PolynomialFitter.cpp",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
